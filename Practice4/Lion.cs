@@ -8,6 +8,14 @@ namespace Practice4
 {
     class Lion : Animal
     {
-        fdafdsa
+        public Lion()
+        {
+
+        }
+
+        public Lion(string id, string name, string state) : base(id, name, state)
+        {
+            
+        }
     }
 }
