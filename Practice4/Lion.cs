@@ -8,6 +8,15 @@ namespace Practice4
 {
     class Lion : Animal
     {
-        fdafdsa
+
+
+        public Lion(string id, string name, string state)
+        {
+            this.id = id;
+            this.name = name;
+            this.state = state;
+        }
+
+
     }
 }
