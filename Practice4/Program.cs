@@ -8,11 +8,19 @@ namespace Practice4
 {
     class Program
     {
-        Lion lion1 = null
 
         static void Main(string[] args)
         {
-            lion1 = new Lion("1234", "Leo", "moving and roaring");
+            Lion lion1 = new Lion("1234", "Leo", "moving and roaring");
+            //Animal animal1 = new Animal("5678", "Polly", "talking and pooping");
+
+            //Animal a;
+            //a = lion1;
+
+            Console.WriteLine(lion1.Moving());
+            //Console.WriteLine(animal1.Moving());
+
+            Console.ReadLine();
         }
     }
 }

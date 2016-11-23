@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Practice4
 {
-    class Animal
+    public abstract class Animal
     {
         private string id;
         private string name;
@@ -60,14 +60,14 @@ namespace Practice4
             }
         }
 
-        public string Communicate()
-        {
-            return name;
-        }
+        public abstract string Communicate();
+        //{
+        //    return name;
+        //}
 
-        public string Moving()
-        {
-            return name;
-        }
+        public abstract string Moving();
+        //{
+        //    return "I am a zoo animal that moves and stuff";
+        //}
     }
 }
