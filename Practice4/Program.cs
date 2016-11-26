@@ -8,16 +8,35 @@ namespace Practice4
 {
     class Program
     {
-
         static void Main(string[] args)
         {
-            Lion lion1 = new Lion("1234", "Leo", "moving and roaring");
+            List<Animal> animals = new List<Animal>();
+
+            Lion lion1 = new Lion("1234", "Nala", "moving and roaring");
+            Lion lion2 = new Lion("5678", "Simba", "sleeping");
+            Lion lion3 = new Lion("7654", "Mufasa", "eating");
+
+            Bird bird1 = new Bird("3333", "Big", "flying and chirping");
+            Bird bird2 = new Bird("8888", "Woodstock", "sleeping");
+
+            animals.Add(lion1);
+            animals.Add(lion2);
+            animals.Add(lion3);
+            animals.Add(bird1);
+            animals.Add(bird2);
+
+            foreach (Animal a in animals)
+            {
+                Console.WriteLine(a.Communicate());
+                Console.WriteLine(a.Moving());
+            }
+
             //Animal animal1 = new Animal("5678", "Polly", "talking and pooping");
 
             //Animal a;
             //a = lion1;
 
-            Console.WriteLine(lion1.Moving());
+            //Console.WriteLine(lion1.Moving());
             //Console.WriteLine(animal1.Moving());
 
             Console.ReadLine();

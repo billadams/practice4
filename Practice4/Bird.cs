@@ -20,12 +20,14 @@ namespace Practice4
 
         public override string Communicate()
         {
-            throw new NotImplementedException();
+            return Name + " ID: " + ID + " is " + State + ".";
         }
 
         public override string Moving()
         {
-            throw new NotImplementedException();
+            return Name + " ID: " + ID + " is " + State + ".";
+
+            //return base.Moving();
         }
     }
 }

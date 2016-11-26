@@ -8,7 +8,6 @@ namespace Practice4
 {
     public class Lion : Animal
     {
-
         public Lion(string id, string name, string state) : base(id, name, state)
         {
 
@@ -16,7 +15,7 @@ namespace Practice4
 
         public override string Communicate()
         {
-            throw new NotImplementedException();
+            return Name + " ID: " + ID + " is " + State + "." ;
         }
 
         public override string Moving()
