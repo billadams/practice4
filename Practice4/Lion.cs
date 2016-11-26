@@ -6,16 +6,24 @@ using System.Threading.Tasks;
 
 namespace Practice4
 {
-    class Lion : Animal
+    public class Lion : Animal
     {
-        public Lion()
+
+        public Lion(string id, string name, string state) : base(id, name, state)
         {
 
         }
 
-        public Lion(string id, string name, string state) : base(id, name, state)
+        public override string Communicate()
         {
-            
+            throw new NotImplementedException();
+        }
+
+        public override string Moving()
+        {
+            return Name + " ID: " + ID + " is " + State + ".";
+
+            //return base.Moving();
         }
     }
 }
