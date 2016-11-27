@@ -8,26 +8,59 @@ namespace Practice4
 {
     public class Bird : Animal
     {
+        public string State { get; set; }
+
         public Bird()
         {
 
         }
 
-        public Bird(string id, string name, string state) : base(id, name, state)
+        public Bird(string id, string name, string state) : base(id, name)
         {
-
+            this.State = state;
         }
 
         public override string Communicate()
         {
-            return Name + " ID: " + ID + " is " + State + ".";
+            if (isAwake())
+            {
+                return "tweeting";
+            }
+            else
+            {
+                return "";
+            }
+            //return Name + " ID: " + ID + " is " + this.State + ".";
         }
 
         public override string Moving()
         {
-            return Name + " ID: " + ID + " is " + State + ".";
+            if (isAwake())
+            {
+                return "moving";
+            }
+            else
+            {
+                return "";
+            }
+            //return Name + " ID: " + ID + " is " + this.State + ".";
+        }
 
-            //return base.Moving();
+        public bool isAwake()
+        {
+            if (this.State != "sleeping" || this.State != "eating")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public override string GetAnimalStatus()
+        {
+            return base.GetAnimalStatus() + " is flying and tweeting.";
         }
     }
 }

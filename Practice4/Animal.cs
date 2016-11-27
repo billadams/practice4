@@ -10,18 +10,16 @@ namespace Practice4
     {
         private string id;
         private string name;
-        private string state;
 
         public Animal()
         {
 
         }
 
-        public Animal(string id, string name, string state)
+        public Animal(string id, string name)
         {
             this.id = id;
             this.name = name;
-            this.state = state;
         }
 
         public string ID
@@ -48,18 +46,6 @@ namespace Practice4
             }
         }
 
-        public string State
-        {
-            get
-            {
-                return state;
-            }
-            set
-            {
-                state = value;
-            }
-        }
-
         public abstract string Communicate();
         //{
         //    return name;
@@ -69,5 +55,10 @@ namespace Practice4
         //{
         //    return "I am a zoo animal that moves and stuff";
         //}
+
+        public virtual string GetAnimalStatus()
+        {
+            return name + " ID: " + ID;
+        }
     }
 }

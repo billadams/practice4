@@ -8,19 +8,21 @@ namespace Practice4
 {
     public class Lion : Animal
     {
-        public Lion(string id, string name, string state) : base(id, name, state)
-        {
+        public string State { get; set; }
 
+        public Lion(string id, string name, string state) : base(id, name)
+        {
+            this.State = state;
         }
 
         public override string Communicate()
         {
-            return Name + " ID: " + ID + " is " + State + "." ;
+            return Name + " ID: " + ID + " is " + this.State + "." ;
         }
 
         public override string Moving()
         {
-            return Name + " ID: " + ID + " is " + State + ".";
+            return Name + " ID: " + ID + " is " + this.State + ".";
 
             //return base.Moving();
         }
