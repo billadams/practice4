@@ -20,7 +20,7 @@ namespace Practice4
 
         public override string Communicate()
         {
-            if (this.State == "sleeping" || this.State == "eating")
+            if (IsEatingOrSleeping())
             {
                 return "";
             }
@@ -32,7 +32,7 @@ namespace Practice4
 
         public override string Moving()
         {
-            if (this.State == "sleeping" || this.State == "eating")
+            if (IsEatingOrSleeping())
             {
                 return "";
             }

@@ -33,6 +33,18 @@ namespace Practice4
             this.State = "sleeping";
         }
 
+        public bool IsEatingOrSleeping()
+        {
+            if (this.State == "sleeping" || this.State == "eating")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public abstract string Communicate();
 
         public abstract string Moving();

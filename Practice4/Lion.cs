@@ -8,6 +8,11 @@ namespace Practice4
 {
     public class Lion : Animal
     {
+        public Lion()
+        {
+
+        }
+
         public Lion(string id, string name) : base(id, name)
         {
 
@@ -15,7 +20,7 @@ namespace Practice4
 
         public override string Communicate()
         {
-            if (this.State == "sleeping" || this.State == "eating")
+            if (IsEatingOrSleeping())
             {
                 return "";
             }
@@ -27,7 +32,7 @@ namespace Practice4
 
         public override string Moving()
         {
-            if (this.State == "sleeping" || this.State == "eating")
+            if (IsEatingOrSleeping())
             {
                 return "";
             }

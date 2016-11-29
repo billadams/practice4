@@ -32,17 +32,9 @@ namespace Practice4
 
             foreach (Animal a in animals)
             {
-                if (a.Communicate() == "" || a.Moving() == "")
-                {
-                    Console.WriteLine(a.ToString());
-                }
-                else
-                {
-                    a.Communicate();
-                    a.Moving();
-                    Console.WriteLine(a.ToString());
-                }
-
+                a.Communicate();
+                a.Moving();
+                Console.WriteLine(a.ToString());
             }
 
             Console.ReadLine();
