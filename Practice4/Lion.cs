@@ -8,23 +8,33 @@ namespace Practice4
 {
     public class Lion : Animal
     {
-        public string State { get; set; }
-
-        public Lion(string id, string name, string state) : base(id, name)
+        public Lion(string id, string name) : base(id, name)
         {
-            this.State = state;
+
         }
 
         public override string Communicate()
         {
-            return Name + " ID: " + ID + " is " + this.State + "." ;
+            if (this.State == "sleeping" || this.State == "eating")
+            {
+                return "";
+            }
+            else
+            {
+                return this.State = "roaring";
+            }
         }
 
         public override string Moving()
         {
-            return Name + " ID: " + ID + " is " + this.State + ".";
-
-            //return base.Moving();
+            if (this.State == "sleeping" || this.State == "eating")
+            {
+                return "";
+            }
+            else
+            {
+                return this.State += " and moving";
+            }
         }
     }
 }

@@ -8,8 +8,9 @@ namespace Practice4
 {
     public abstract class Animal
     {
-        private string id;
-        private string name;
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string State { get; set; }
 
         public Animal()
         {
@@ -18,47 +19,27 @@ namespace Practice4
 
         public Animal(string id, string name)
         {
-            this.id = id;
-            this.name = name;
+            this.ID = id;
+            this.Name = name;
         }
 
-        public string ID
+        public void Eat()
         {
-            get
-            {
-                return id;
-            }
-            set
-            {
-                id = value;
-            }
+            this.State = "eating";
         }
 
-        public string Name
+        public void Sleep()
         {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
+            this.State = "sleeping";
         }
 
         public abstract string Communicate();
-        //{
-        //    return name;
-        //}
 
         public abstract string Moving();
-        //{
-        //    return "I am a zoo animal that moves and stuff";
-        //}
 
-        public virtual string GetAnimalStatus()
+        public override string ToString()
         {
-            return name + " ID: " + ID;
+            return this.Name + " ID: " + this.ID + " is " + this.State + ".";
         }
     }
 }
